@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* # Colors
+
+### Primary
+
+- Blue:
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%) */
+
+:root {
+    /* Primary */
+    --p-blue: hsl(246, 80%, 60%);
+    --p-light-orange: hsl(15, 100%, 70%);
+    --p-soft-blue: hsl(195, 74%, 62%);
+    --p-light-red: hsl(348, 100%, 68%);
+    --p-lime-green: hsl(145, 58%, 55%);
+    --p-violet: hsl(264, 64%, 52%);
+    --p-soft-orange: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    --n-very-dark-blue: hsl(226, 43%, 10%);
+    --n-dark-blue: hsl(235, 46%, 20%);
+    --n-desaturated-blue: hsl(235, 45%, 61%);
+    --n-pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--n-very-dark-blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-width: 900px;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set Container */
+.container {
+    display: flex;
+    max-width: 1000px;
+}
+
+
+/* ////////////Styles Profile Card////////////////// */
+.profileCard {
+    background-color: var(--n-dark-blue);
+    width: 12.5rem;
+    border-radius: 0.625rem;
+}
+
+
+.profile {
+    background-color: var(--p-blue);
+    font-weight: 300;
+    padding: 2.25rem 1.5rem 3rem 1.5rem;
+    border-radius: 1.25rem;
+}
+
+.profile h1 {
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.profile small {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--n-pale-blue);
+}
+
+/* Set Image */
+
+/* .profile-img {
+    padding: 2rem;
+} */
+
+.profile-img img {
+    width: 70px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+
+}
+
+/* Set text - menu*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem 1rem 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--n-desaturated-blue);
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.menu .active {
+    color: #fff;
+}
+
+/*////////////// Set cards /////////////////*/
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    cursor: pointer;
+}
+
+
+.activities {
+    position: relative;
+    background-color: var(--p-blue);
+    margin: 0 0 0.75rem 1.25rem;
+    border-radius: 1.25rem;
+    width: 200px;
+    height: auto;
+}
+
+.cardB {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+.activities-Text {
+    height: 170px;
+    padding: 1rem 1.2rem 1rem 1.5rem;
+    background-color: var(--n-dark-blue);
+    margin-top: 2rem;
+    border-radius: 1rem;
+
+}
+
+
+.activities-Text:hover {
+    background-color: var(--n-desaturated-blue);
+}
+
+/*Set Texts*/
+.activities-Text p {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.875rem;
+}
+
+.activities-Text h1 {
+    font-weight: 300;
+    font-size: 42px;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.activities-Text small {
+    display: block;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--n-pale-blue);
+    padding-bottom: 1rem;
+}
+
+/* Set Background Colors */
+.actWork {
+    background-color: var(--p-light-orange);
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 120px -10px;
+}
+
+.actPlay {
+    background-color: var(--p-soft-blue);
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 120px -10px;
+}
+
+.actStudy {
+    background-color: var(--p-light-red);
+    background-image: url(images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 120px -10px;
+}
+
+.actExercise {
+    background-color: var(--p-lime-green);
+    background-image: url(images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 120px 0px;
+}
+
+.actSocial {
+    background-color: var(--p-violet);
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 120px -15px;
+}
+
+.actSelf {
+    background-color: var(--p-soft-orange);
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 120px -15px;
+}
+
+/* More links */
+/* .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+
+} */
+
+.more {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    height: 5px;
+    width: 22px;
+    display: block;
+    background-image: url(images/icon-ellipsis.svg);
+    background-repeat: no-repeat;
+}
+
+.more:hover {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(112deg) brightness(107%) contrast(103%);
+}
+
+
+/*////////// Mobile Device //////////*/
+@media(max-width: 375px) {
+    body {
+        min-width: 270px;
+        display: block;
+    }
+
+    .container {
+        display: block;
+        padding: 0 1rem 2rem;
+    }
+
+    .activities {
+        width: auto;
+        margin-right: 0.75rem;
+        margin-left: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profileCard {
+        width: auto;
+        margin: 1rem 1rem 1.5rem;
+    }
+
+    .card {
+        grid-template-columns: auto;
+    }
+
+   
+    .activities-Text {
+        height: 120px;
+        padding: 1rem 1rem 0.5rem 1.5rem;
+    }
+
+    .activities-Text small {
+        text-align: right;
+        padding-top: 0.5rem;
+        padding-right: 0.2rem;
+        
+    }
+
+    .activities-Text h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .activities-Text p {
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .menu {
+    flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .small {
+        padding-left: 1rem;
+    }
+    .small h1 {
+        font-size: 1.5em
+    }
+
+    .small small {
+        padding-bottom: 0.2rem;
+    }
+
+    .profile h1 {
+    max-width: 180px;
+    font-size: 1.3rem;
+    }
+
+    .activities-Text {
+        display: grid;
+        grid-template-columns:  auto auto;
+    }
+
+    .activities-Text .title {
+        grid-area: 1 / 1 / 2 / 3;
+
+
+    }
+
+    .actWork, .actPlay, .actSelf, .actSocial, .actExercise, .actStudy {
+        background-position: 95% -5%;  
+      
+    }
+}
